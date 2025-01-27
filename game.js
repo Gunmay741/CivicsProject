@@ -14,6 +14,7 @@ let r = 0;
 let n = 0;
 let f = 0;
 let h = 0;
+let speed = 5;
 function setup() {
   createCanvas(1200, 600);
   textAlign(CENTER, CENTER)
@@ -50,9 +51,18 @@ function draw() {
     text("👮", 180, 200)
     text("👴", 1080, 500)
     text("👶", x, y)
-    text("🏎️" p, 300)
+    textSize(150)
+    text("🏎️", p, 250)
+    p += speed;
   }
-  
+  if (x < p + 500 && x > p - 500 && y > 200 && y < 300) {
+  game_state = 5;
+}
+  if (p === 1200) {
+    speed = -5;
+  } else if (p === 0) {
+    speed = 5
+  }
     if (kb.pressing("ArrowUp")){
        y = y - 5;
     }
@@ -142,7 +152,15 @@ function draw() {
     background(0,154,23); 
     textSize(30)
     text("Perfect! The Trafficker has been arrested!", 600, 300)
-  }
-
-  
+  } 
+  else if (game_state == 5) {
+      clear(); 
+      background(0,154,23); 
+      textSize(30)
+      text("You got run over", 600, 300)
+      text("Press space to try again", 600, 350)
+      if (kb.presses("space")){
+        game_state = 1; 
+      }
+    }  
 }
