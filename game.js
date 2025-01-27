@@ -5,8 +5,9 @@
 3: win 
 */
 let game_state = 0;
+let p = 600;
 let x = 600;
-let y = 300;
+let y = 400;
 let t1 = 600;
 let t2 = 400;
 let r = 0;
@@ -49,7 +50,9 @@ function draw() {
     text("👮", 180, 200)
     text("👴", 1080, 500)
     text("👶", x, y)
+    text("🏎️" p, 300)
   }
+  
     if (kb.pressing("ArrowUp")){
        y = y - 5;
     }
