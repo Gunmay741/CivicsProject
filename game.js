@@ -59,7 +59,7 @@ function draw() {
     if (x < 1050 && x > 950 && y > 50 && y < 150) {
       game_state = 6;
     }
-    if (abs(x - p) < 50 && y > 200 && y < 300) {
+    if (abs(x - p) < 20 && y > 230 && y < 270) {
       game_state = 5;
     }
 
