@@ -54,14 +54,16 @@ function draw() {
     textSize(150);
     text("🌳", 1000, 100)
     text("🏎️", p, 250);
+    textSize(40)
+    text("💵", 950, 200)
    
 
   }
     p += speed;
-     if (x < 1000 && x > 900 && y > 0 && y < 200) {
+     if (x < 1100 && x > 900 && y > 0 && y < 200) {
       game_state = 6;
     }
-    if (x < p + 50 && x > p - 50 && y > 200 && y < 300) {
+    if (x < p + 100 && x > p - 100 && y > 150 && y < 350) {
       game_state = 5;
     }
 
